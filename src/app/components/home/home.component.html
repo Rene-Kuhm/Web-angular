@@ -25,7 +25,7 @@
     <div class="relative z-10 container mx-auto px-4">
       <div class="text-center max-w-4xl mx-auto">
         <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 animate-fade-in">
-          Welcome to 
+          {{ 'HOME.WELCOME' | translate }} 
           <span class="relative inline-block">
             <span class="relative z-10 bg-gradient-to-r from-accent via-white to-secondary bg-clip-text text-transparent">
               WebDev Hub
@@ -35,16 +35,24 @@
         </h1>
         
         <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8 animate-fade-in-delay">
-          Your journey to mastering web development starts here
+          {{ 'HOME.SUBTITLE' | translate }}
         </p>
 
         <!-- Animated Words -->
         <div class="h-20 overflow-hidden my-12">
           <div class="flex flex-col animate-cycle-words">
-            <div class="h-20 flex items-center justify-center text-2xl md:text-4xl font-bold text-accent">Learn</div>
-            <div class="h-20 flex items-center justify-center text-2xl md:text-4xl font-bold text-accent">Create</div>
-            <div class="h-20 flex items-center justify-center text-2xl md:text-4xl font-bold text-accent">Innovate</div>
-            <div class="h-20 flex items-center justify-center text-2xl md:text-4xl font-bold text-accent">Learn</div>
+            <div class="h-20 flex items-center justify-center text-2xl md:text-4xl font-bold text-accent">
+              {{ 'HOME.ANIMATED_WORDS.LEARN' | translate }}
+            </div>
+            <div class="h-20 flex items-center justify-center text-2xl md:text-4xl font-bold text-accent">
+              {{ 'HOME.ANIMATED_WORDS.CREATE' | translate }}
+            </div>
+            <div class="h-20 flex items-center justify-center text-2xl md:text-4xl font-bold text-accent">
+              {{ 'HOME.ANIMATED_WORDS.INNOVATE' | translate }}
+            </div>
+            <div class="h-20 flex items-center justify-center text-2xl md:text-4xl font-bold text-accent">
+              {{ 'HOME.ANIMATED_WORDS.LEARN' | translate }}
+            </div>
           </div>
         </div>
 
@@ -54,7 +62,7 @@
                   class="btn btn-primary group"
                   routerLink="/tutorials">
             <span class="flex items-center">
-              Get Started
+              {{ 'HOME.ACTIONS.GET_STARTED' | translate }}
               <mat-icon class="ml-2 transition-transform group-hover:translate-x-1">arrow_forward</mat-icon>
             </span>
           </button>
@@ -63,7 +71,7 @@
                   class="btn btn-outline group"
                   routerLink="/blog">
             <span class="flex items-center">
-              Explore Blog
+              {{ 'HOME.ACTIONS.EXPLORE_BLOG' | translate }}
               <mat-icon class="ml-2 transition-transform group-hover:translate-x-1">library_books</mat-icon>
             </span>
           </button>
@@ -76,7 +84,7 @@
   <section class="py-20 bg-white">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-        Technologies We Cover
+        {{ 'TECHNOLOGIES.TITLE' | translate }}
       </h2>
       
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
@@ -86,7 +94,7 @@
             <mat-icon class="text-4xl text-primary mb-3 transition-transform group-hover:scale-110">
               {{tech.icon}}
             </mat-icon>
-            <h3 class="font-medium">{{tech.name}}</h3>
+            <h3 class="font-medium">{{tech.name | translate}}</h3>
           </div>
         </div>
       </div>
@@ -102,12 +110,12 @@
             <div class="w-16 h-16 rounded-full bg-primary text-white mx-auto mb-6 flex items-center justify-center">
               <mat-icon class="text-3xl">school</mat-icon>
             </div>
-            <h3 class="text-xl font-bold mb-4">Interactive Tutorials</h3>
+            <h3 class="text-xl font-bold mb-4">{{ 'FEATURES.TUTORIALS.TITLE' | translate }}</h3>
             <p class="text-gray-600">
-              Step-by-step guides with practical examples to help you master web development concepts.
+              {{ 'FEATURES.TUTORIALS.DESCRIPTION' | translate }}
             </p>
             <button mat-raised-button color="primary" class="mt-6">
-              Start Learning
+              {{ 'FEATURES.TUTORIALS.ACTION' | translate }}
             </button>
           </div>
         </mat-card>
@@ -117,12 +125,12 @@
             <div class="w-16 h-16 rounded-full bg-secondary text-white mx-auto mb-6 flex items-center justify-center">
               <mat-icon class="text-3xl">code</mat-icon>
             </div>
-            <h3 class="text-xl font-bold mb-4">Hands-on Projects</h3>
+            <h3 class="text-xl font-bold mb-4">{{ 'FEATURES.PROJECTS.TITLE' | translate }}</h3>
             <p class="text-gray-600">
-              Build real-world applications using modern web development technologies.
+              {{ 'FEATURES.PROJECTS.DESCRIPTION' | translate }}
             </p>
             <button mat-raised-button color="primary" class="mt-6">
-              View Projects
+              {{ 'FEATURES.PROJECTS.ACTION' | translate }}
             </button>
           </div>
         </mat-card>
@@ -132,12 +140,12 @@
             <div class="w-16 h-16 rounded-full bg-accent text-white mx-auto mb-6 flex items-center justify-center">
               <mat-icon class="text-3xl">group</mat-icon>
             </div>
-            <h3 class="text-xl font-bold mb-4">Community Support</h3>
+            <h3 class="text-xl font-bold mb-4">{{ 'FEATURES.COMMUNITY.TITLE' | translate }}</h3>
             <p class="text-gray-600">
-              Join our community of developers to share knowledge and grow together.
+              {{ 'FEATURES.COMMUNITY.DESCRIPTION' | translate }}
             </p>
             <button mat-raised-button color="primary" class="mt-6">
-              Join Community
+              {{ 'FEATURES.COMMUNITY.ACTION' | translate }}
             </button>
           </div>
         </mat-card>

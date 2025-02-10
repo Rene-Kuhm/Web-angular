@@ -1,0 +1,57 @@
+{
+  "HOME": {
+    "WELCOME": "Welcome to",
+    "SUBTITLE": "Your journey to mastering web development starts here",
+    "ACTIONS": {
+      "GET_STARTED": "Get Started",
+      "EXPLORE_BLOG": "Explore Blog"
+    },
+    "ANIMATED_WORDS": {
+      "LEARN": "Learn",
+      "CREATE": "Create",
+      "INNOVATE": "Innovate"
+    }
+  },
+  "TECHNOLOGIES": {
+    "TITLE": "Technologies We Cover",
+    "ITEMS": {
+      "ANGULAR": "Angular",
+      "REACT": "React",
+      "VUE": "Vue",
+      "NODEJS": "Node.js",
+      "PYTHON": "Python",
+      "TYPESCRIPT": "TypeScript"
+    }
+  },
+  "FEATURES": {
+    "TUTORIALS": {
+      "TITLE": "Interactive Tutorials",
+      "DESCRIPTION": "Step-by-step guides with practical examples to help you master web development concepts.",
+      "ACTION": "Start Learning"
+    },
+    "PROJECTS": {
+      "TITLE": "Hands-on Projects",
+      "DESCRIPTION": "Build real-world applications using modern web development technologies.",
+      "ACTION": "View Projects"
+    },
+    "COMMUNITY": {
+      "TITLE": "Community Support",
+      "DESCRIPTION": "Join our community of developers to share knowledge and grow together.",
+      "ACTION": "Join Community"
+    }
+  },
+  "ABOUT": {
+    "TITLE": "About Us",
+    "DESCRIPTION": "We are a platform dedicated to helping developers master the latest web technologies. Our goal is to provide high-quality educational resources and create a vibrant developer community."
+  },
+  "BLOG": {
+    "TITLE": "Blog",
+    "READ_MORE": "Read More"
+  },
+  "TUTORIALS": {
+    "TITLE": "Tutorials",
+    "PROGRESS": "Progress",
+    "START": "Start",
+    "CONTINUE": "Continue"
+  }
+}

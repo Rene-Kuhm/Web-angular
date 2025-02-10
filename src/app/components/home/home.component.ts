@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -14,16 +15,17 @@ import { MatCardModule } from '@angular/material/card';
     RouterModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    TranslateModule
   ]
 })
 export class HomeComponent {
   technologies = [
-    { name: 'Angular', icon: 'code' },
-    { name: 'React', icon: 'web' },
-    { name: 'Vue', icon: 'widgets' },
-    { name: 'Node.js', icon: 'dns' },
-    { name: 'Python', icon: 'code' },
-    { name: 'TypeScript', icon: 'language' }
+    { name: 'TECHNOLOGIES.ITEMS.ANGULAR', icon: 'code' },
+    { name: 'TECHNOLOGIES.ITEMS.REACT', icon: 'web' },
+    { name: 'TECHNOLOGIES.ITEMS.VUE', icon: 'widgets' },
+    { name: 'TECHNOLOGIES.ITEMS.NODEJS', icon: 'dns' },
+    { name: 'TECHNOLOGIES.ITEMS.PYTHON', icon: 'code' },
+    { name: 'TECHNOLOGIES.ITEMS.TYPESCRIPT', icon: 'language' }
   ];
 }

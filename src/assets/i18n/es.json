@@ -1,0 +1,57 @@
+{
+  "HOME": {
+    "WELCOME": "Bienvenido a",
+    "SUBTITLE": "Tu viaje para dominar el desarrollo web comienza aquí",
+    "ACTIONS": {
+      "GET_STARTED": "Comenzar",
+      "EXPLORE_BLOG": "Explorar Blog"
+    },
+    "ANIMATED_WORDS": {
+      "LEARN": "Aprende",
+      "CREATE": "Crea",
+      "INNOVATE": "Innova"
+    }
+  },
+  "TECHNOLOGIES": {
+    "TITLE": "Tecnologías que Cubrimos",
+    "ITEMS": {
+      "ANGULAR": "Angular",
+      "REACT": "React",
+      "VUE": "Vue",
+      "NODEJS": "Node.js",
+      "PYTHON": "Python",
+      "TYPESCRIPT": "TypeScript"
+    }
+  },
+  "FEATURES": {
+    "TUTORIALS": {
+      "TITLE": "Tutoriales Interactivos",
+      "DESCRIPTION": "Guías paso a paso con ejemplos prácticos para ayudarte a dominar conceptos de desarrollo web.",
+      "ACTION": "Comenzar a Aprender"
+    },
+    "PROJECTS": {
+      "TITLE": "Proyectos Prácticos",
+      "DESCRIPTION": "Construye aplicaciones del mundo real usando tecnologías modernas de desarrollo web.",
+      "ACTION": "Ver Proyectos"
+    },
+    "COMMUNITY": {
+      "TITLE": "Soporte Comunitario",
+      "DESCRIPTION": "Únete a nuestra comunidad de desarrolladores para compartir conocimientos y crecer juntos.",
+      "ACTION": "Unirse a la Comunidad"
+    }
+  },
+  "ABOUT": {
+    "TITLE": "Sobre Nosotros",
+    "DESCRIPTION": "Somos una plataforma dedicada a ayudar a desarrolladores a dominar las últimas tecnologías web. Nuestro objetivo es proporcionar recursos educativos de alta calidad y crear una comunidad vibrante de desarrolladores."
+  },
+  "BLOG": {
+    "TITLE": "Blog",
+    "READ_MORE": "Leer más"
+  },
+  "TUTORIALS": {
+    "TITLE": "Tutoriales",
+    "PROGRESS": "Progreso",
+    "START": "Comenzar",
+    "CONTINUE": "Continuar"
+  }
+}
