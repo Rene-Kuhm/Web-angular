@@ -1,0 +1,92 @@
+<div class="home-container">
+  <section class="hero" @fadeIn>
+    <div class="animated-bg"></div>
+    <div class="hero-content">
+      <h1>Welcome to <span class="highlight">WebDev Hub</span></h1>
+      <p class="subtitle">Your journey to mastering web development starts here</p>
+      <div class="animated-text">
+        <span>Learn</span>
+        <span>Create</span>
+        <span>Innovate</span>
+      </div>
+      <div class="cta-buttons">
+        <button mat-raised-button color="accent" routerLink="/tutorials" class="get-started">
+          Get Started
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+        <button mat-stroked-button routerLink="/blog" class="explore">
+          Explore Blog
+          <mat-icon>library_books</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+  </section>
+
+  <section class="tech-stack" @staggerAnimation>
+    <h2>Technologies We Cover</h2>
+    <div class="tech-grid">
+      <div class="tech-item" *ngFor="let tech of technologies">
+        <mat-icon>{{tech.icon}}</mat-icon>
+        <span>{{tech.name}}</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" @staggerAnimation>
+    <mat-card class="feature-card" @fadeIn>
+      <div class="card-icon">
+        <mat-icon>school</mat-icon>
+      </div>
+      <mat-card-header>
+        <mat-card-title>Interactive Tutorials</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Step-by-step guides with practical examples to help you master web development concepts.</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" routerLink="/tutorials">Start Learning</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="feature-card" @fadeIn>
+      <div class="card-icon">
+        <mat-icon>article</mat-icon>
+      </div>
+      <mat-card-header>
+        <mat-card-title>Latest Blog Posts</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Discover insights, tips, and best practices from experienced developers in our regularly updated blog.</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" routerLink="/blog">Read Articles</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="feature-card" @fadeIn>
+      <div class="card-icon">
+        <mat-icon>code</mat-icon>
+      </div>
+      <mat-card-header>
+        <mat-card-title>Code Examples</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Real-world code examples and projects to help you understand complex programming concepts.</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" routerLink="/examples">View Examples</button>
+      </mat-card-actions>
+    </mat-card>
+  </section>
+
+  <section class="newsletter" @fadeIn>
+    <div class="newsletter-content">
+      <h2>Stay Updated</h2>
+      <p>Get the latest web development tips and tutorials delivered to your inbox</p>
+      <div class="newsletter-form">
+        <button mat-raised-button color="accent">Subscribe Now</button>
+      </div>
+    </div>
+  </section>
+</div>

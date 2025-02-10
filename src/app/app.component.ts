@@ -1,12 +1,25 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  standalone: true,
+  imports: [RouterOutlet, NavigationComponent],
+  template: `
+    <app-navigation></app-navigation>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  `,
+  styles: [`
+    main {
+      padding: 80px 20px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  `]
 })
 export class AppComponent {
-  title = 'my-angular-app';
+  title = 'WebDev Hub';
 }

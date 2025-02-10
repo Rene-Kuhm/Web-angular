@@ -1,1 +1,204 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@use 'sass:map';
+
+// Include common styles
+@include mat.core();
+
+// Define the theme
+$theme: (
+  color: (
+    primary: (
+      default: #3f51b5,
+      lighter: #c5cae9,
+      darker: #303f9f,
+      text: white,
+      default-contrast: white,
+      lighter-contrast: rgba(0, 0, 0, 0.87),
+      darker-contrast: white,
+    ),
+    accent: (
+      default: #ff4081,
+      lighter: #ff80ab,
+      darker: #f50057,
+      text: white,
+      default-contrast: white,
+      lighter-contrast: rgba(0, 0, 0, 0.87),
+      darker-contrast: white,
+    ),
+    warn: (
+      default: #f44336,
+      lighter: #ffcdd2,
+      darker: #d32f2f,
+      text: white,
+      default-contrast: white,
+      lighter-contrast: rgba(0, 0, 0, 0.87),
+      darker-contrast: white,
+    ),
+    is-dark: false,
+    foreground: (
+      text: rgba(0, 0, 0, 0.87),
+      secondary-text: rgba(0, 0, 0, 0.54),
+      hint-text: rgba(0, 0, 0, 0.38),
+      disabled-text: rgba(0, 0, 0, 0.38),
+      divider: rgba(0, 0, 0, 0.12),
+      icon: rgba(0, 0, 0, 0.54),
+      icons: rgba(0, 0, 0, 0.54),
+      slider-min: rgba(0, 0, 0, 0.87),
+      slider-off: rgba(0, 0, 0, 0.26),
+      slider-off-active: rgba(0, 0, 0, 0.38),
+    ),
+    background: (
+      background: white,
+      status-bar: map.get(mat.$indigo-palette, 300),
+      app-bar: map.get(mat.$indigo-palette, 100),
+      hover: rgba(0, 0, 0, 0.04),
+      card: white,
+      dialog: white,
+      disabled-button: rgba(0, 0, 0, 0.12),
+      raised-button: white,
+      focused-button: rgba(0, 0, 0, 0.12),
+      selected-button: map.get(mat.$indigo-palette, 50),
+      selected-disabled-button: rgba(0, 0, 0, 0.12),
+      disabled-button-toggle: #eeeeee,
+      unselected-chip: #e0e0e0,
+      disabled-list-option: #eeeeee,
+      tooltip: #616161,
+    ),
+  ),
+  typography: mat.define-typography-config(),
+  density: 0,
+);
+
+// Apply the theme
+@include mat.all-component-themes($theme);
+
+// CSS Variables for theme colors
+:root {
+  // Light theme colors
+  --background-color: #ffffff;
+  --surface-color: #fafafa;
+  --text-color: rgba(0, 0, 0, 0.87);
+  --secondary-text-color: rgba(0, 0, 0, 0.6);
+  --border-color: rgba(0, 0, 0, 0.12);
+  --card-background: #ffffff;
+  --hover-color: rgba(0, 0, 0, 0.04);
+  --gradient-start: #ee7752;
+  --gradient-middle: #e73c7e;
+  --gradient-end: #23a6d5;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+// Dark theme
+.dark-theme {
+  // Override Material theme colors
+  --background-color: #121212;
+  --surface-color: #1e1e1e;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --secondary-text-color: rgba(255, 255, 255, 0.6);
+  --border-color: rgba(255, 255, 255, 0.12);
+  --card-background: #2d2d2d;
+  --hover-color: rgba(255, 255, 255, 0.04);
+  --gradient-start: #2c1810;
+  --gradient-middle: #2c0f1d;
+  --gradient-end: #0a2c38;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+
+  // Override Material components
+  .mat-mdc-card {
+    background-color: var(--card-background);
+    color: var(--text-color);
+  }
+
+  .mat-mdc-button, .mat-mdc-raised-button, .mat-mdc-outlined-button {
+    &:not([color]) {
+      color: var(--text-color);
+    }
+  }
+
+  .mat-mdc-form-field {
+    .mat-mdc-input-element {
+      color: var(--text-color);
+    }
+    .mat-mdc-form-field-label {
+      color: var(--secondary-text-color);
+    }
+  }
+
+  .mat-toolbar {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+  }
+}
+
+// Global styles
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+// Animated background
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(-45deg, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  opacity: 0.8;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+// Common utility classes
+.text-gradient {
+  background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.glass-effect {
+  background: rgba(var(--background-color), 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(var(--border-color), 0.1);
+}
+
+// Scrollbar styling
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-text-color);
+  border-radius: 4px;
+  
+  &:hover {
+    background: var(--text-color);
+  }
+}
+
+// Selection styling
+::selection {
+  background: var(--gradient-middle);
+  color: white;
+}
