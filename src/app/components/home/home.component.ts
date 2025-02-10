@@ -1,47 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { RouterModule } from '@angular/router';
-import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
-import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, RouterModule, MatIconModule, CommonModule],
-  animations: [
-    trigger('fadeIn', [
-      transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(20px)' }),
-        animate('600ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
-      ])
-    ]),
-    trigger('staggerAnimation', [
-      transition('* => *', [
-        query(':enter', [
-          style({ opacity: 0, transform: 'translateY(50px)' }),
-          stagger('200ms', [
-            animate('600ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
-          ])
-        ], { optional: true })
-      ])
-    ])
+  imports: [
+    CommonModule,
+    RouterModule,
+    MatButtonModule,
+    MatIconModule,
+    MatCardModule
   ]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   technologies = [
-    { icon: 'html', name: 'HTML5' },
-    { icon: 'css', name: 'CSS3' },
-    { icon: 'javascript', name: 'JavaScript' },
-    { icon: 'code', name: 'TypeScript' },
-    { icon: 'web', name: 'Angular' },
-    { icon: 'storage', name: 'Node.js' }
+    { name: 'Angular', icon: 'code' },
+    { name: 'React', icon: 'web' },
+    { name: 'Vue', icon: 'widgets' },
+    { name: 'Node.js', icon: 'dns' },
+    { name: 'Python', icon: 'code' },
+    { name: 'TypeScript', icon: 'language' }
   ];
-
-  ngOnInit() {
-    // Animation will start when component initializes
-  }
 }

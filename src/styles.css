@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-color: theme('colors.primary');
+    --secondary-color: theme('colors.secondary');
+    --accent-color: theme('colors.accent');
+  }
+
+  html {
+    @apply antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    @apply h-full m-0 bg-white text-gray-900;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold transition-all duration-300 ease-in-out;
+  }
+  
+  .btn-primary {
+    @apply bg-accent text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-white text-white backdrop-blur-sm bg-white/10 hover:bg-white/20;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+}
+
+/* Material Design Overrides */
+.mat-mdc-card {
+  @apply rounded-xl shadow-lg !important;
+}
+
+.mat-mdc-button-base {
+  @apply font-medium !important;
+}
+
+.mat-mdc-raised-button.mat-primary {
+  @apply bg-primary text-white !important;
+}
+
+.mat-mdc-raised-button.mat-accent {
+  @apply bg-accent text-white !important;
+}
+
+.mat-mdc-raised-button.mat-warn {
+  @apply bg-red-500 text-white !important;
+}
+
+/* Animation Classes */
+.animate-gradient {
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-fade-in-delay {
+  animation: fadeIn 1s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.animate-cycle-words {
+  animation: cycleWords 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Animation Keyframes */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cycleWords {
+  0%, 25% {
+    transform: translateY(0%);
+  }
+  30%, 50% {
+    transform: translateY(-100%);
+  }
+  55%, 75% {
+    transform: translateY(-200%);
+  }
+  80%, 100% {
+    transform: translateY(-300%);
+  }
+}
+
+/* Utility Classes */
+.delay-75 {
+  animation-delay: 75ms;
+}
+
+.delay-150 {
+  animation-delay: 150ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-700 {
+  animation-delay: 700ms;
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440" height="1024" viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.3">
+        <path d="M0 0L1440 1024" stroke="white" stroke-width="2"/>
+        <path d="M100 0L1440 924" stroke="white" stroke-width="2"/>
+        <path d="M200 0L1440 824" stroke="white" stroke-width="2"/>
+        <path d="M300 0L1440 724" stroke="white" stroke-width="2"/>
+        <path d="M400 0L1440 624" stroke="white" stroke-width="2"/>
+        <path d="M500 0L1440 524" stroke="white" stroke-width="2"/>
+        <path d="M600 0L1440 424" stroke="white" stroke-width="2"/>
+        <path d="M700 0L1440 324" stroke="white" stroke-width="2"/>
+        <path d="M800 0L1440 224" stroke="white" stroke-width="2"/>
+        <path d="M900 0L1440 124" stroke="white" stroke-width="2"/>
+        <path d="M1000 0L1440 24" stroke="white" stroke-width="2"/>
+        <path d="M0 100L1340 1024" stroke="white" stroke-width="2"/>
+        <path d="M0 200L1240 1024" stroke="white" stroke-width="2"/>
+        <path d="M0 300L1140 1024" stroke="white" stroke-width="2"/>
+        <path d="M0 400L1040 1024" stroke="white" stroke-width="2"/>
+        <path d="M0 500L940 1024" stroke="white" stroke-width="2"/>
+        <path d="M0 600L840 1024" stroke="white" stroke-width="2"/>
+        <path d="M0 700L740 1024" stroke="white" stroke-width="2"/>
+        <path d="M0 800L640 1024" stroke="white" stroke-width="2"/>
+        <path d="M0 900L540 1024" stroke="white" stroke-width="2"/>
+    </g>
+</svg>
